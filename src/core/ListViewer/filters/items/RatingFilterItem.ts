@@ -6,7 +6,7 @@ interface IRatingFilterItemInput extends IAbstractFilterItemInput {
 }
 
 export class RatingFilterItem extends AbstractFilterItem {
-  component = CheckBoxFilterItemComponent;
+  component = CheckBoxFilterItemComponent
 
   minRating = 0
   currentValue = false

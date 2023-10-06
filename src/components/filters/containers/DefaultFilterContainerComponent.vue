@@ -16,11 +16,11 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 
 @Component
 export default class DefaultFilterContainerComponent extends Vue {
-    @Prop({ required: true })
+  @Prop({ required: true })
     container!: IAbstractFilterContainer
 
-    get filterItems () {
-      return this.container.getFilterItems()
-    }
+  get filterItems () {
+    return this.container.getFilterItems()
+  }
 }
 </script>

@@ -7,10 +7,10 @@ interface IRangeFilterItemInput extends IAbstractFilterItemInput {
 }
 
 export class RangeFilterItem extends AbstractFilterItem {
-  component = RangeFilterItemComponent;
+  component = RangeFilterItemComponent
 
-  minRange!: number;
-  maxRange!: number;
+  minRange!: number
+  maxRange!: number
 
   currentValue = 0
 

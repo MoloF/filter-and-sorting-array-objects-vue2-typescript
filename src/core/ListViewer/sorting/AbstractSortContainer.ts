@@ -2,37 +2,37 @@ import { Component } from 'vue'
 import { AbstractSortItem } from './AbstractSortItem'
 
 export interface IAbstractSortContainer {
-    component: Component;
+  component: Component;
 
-    addSortItem (sortItems: AbstractSortItem[]): void;
-    selectSortItem (itemIndex: number): void;
-    getSortItems (): AbstractSortItem[];
-    getSortItem (): AbstractSortItem | undefined;
+  addSortItem (sortItems: AbstractSortItem[]): void;
+  selectSortItem (itemIndex: number): void;
+  getSortItems (): AbstractSortItem[];
+  getSortItem (): AbstractSortItem | undefined;
 }
 
 export abstract class AbstractSortContainer implements IAbstractSortContainer {
-    abstract component: Component;
+  abstract component: Component;
 
-    private sortItems: AbstractSortItem[] = [];
-    private selectedSortItemIndex = 0;
+  private sortItems: AbstractSortItem[] = []
+  private selectedSortItemIndex = 0
 
-    private getSortItemByIndex (itemIndex: number): AbstractSortItem | undefined {
-      return this.sortItems[itemIndex]
-    }
+  private getSortItemByIndex (itemIndex: number): AbstractSortItem | undefined {
+    return this.sortItems[itemIndex]
+  }
 
-    addSortItem (sortItems: AbstractSortItem[]): void {
-      this.sortItems.push(...sortItems)
-    }
+  addSortItem (sortItems: AbstractSortItem[]): void {
+    this.sortItems.push(...sortItems)
+  }
 
-    selectSortItem (itemIndex: number): void {
-      this.selectedSortItemIndex = itemIndex
-    }
+  selectSortItem (itemIndex: number): void {
+    this.selectedSortItemIndex = itemIndex
+  }
 
-    getSortItems (): AbstractSortItem[] {
-      return this.sortItems
-    }
+  getSortItems (): AbstractSortItem[] {
+    return this.sortItems
+  }
 
-    getSortItem (): AbstractSortItem | undefined {
-      return this.getSortItemByIndex(this.selectedSortItemIndex)
-    }
+  getSortItem (): AbstractSortItem | undefined {
+    return this.getSortItemByIndex(this.selectedSortItemIndex)
+  }
 }

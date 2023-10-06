@@ -12,7 +12,7 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
 export default class CheckBoxFilterItemComponent extends Vue {
   @Prop({ required: true })
-  filter!: RatingFilterItem
+    filter!: RatingFilterItem
 
   onChange (event: Event) {
     const target = event.target as HTMLInputElement

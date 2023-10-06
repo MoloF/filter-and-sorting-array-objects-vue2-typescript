@@ -2,5 +2,5 @@ import DefaultSortContainerComponent from '@/components/sorting/containers/Defau
 import { AbstractSortContainer } from '../AbstractSortContainer'
 
 export class DefaultSortContainer extends AbstractSortContainer {
-    component = DefaultSortContainerComponent
+  component = DefaultSortContainerComponent
 }

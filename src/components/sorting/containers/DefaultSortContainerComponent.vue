@@ -16,7 +16,7 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
 export default class DefaultSortContainerComponent extends Vue {
     @Prop({ required: true })
-    container!: IAbstractSortContainer
+      container!: IAbstractSortContainer
 
     get selectOptions () {
       return this.container.getSortItems()

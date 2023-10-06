@@ -2,16 +2,16 @@ import { Component } from 'vue'
 import { AbstractFilterItem } from './AbstractFilterItem'
 
 export interface IAbstractFilterContainer {
-    component: Component;
+  component: Component;
 
-    addFilterItem (filterItems: AbstractFilterItem[]): void;
-    getFilterItems (): AbstractFilterItem[];
+  addFilterItem (filterItems: AbstractFilterItem[]): void;
+  getFilterItems (): AbstractFilterItem[];
 }
 
 export abstract class AbstractFilterContainer implements IAbstractFilterContainer {
     abstract component: Component;
 
-    private filterItems: AbstractFilterItem[] = [];
+    private filterItems: AbstractFilterItem[] = []
 
     addFilterItem (filterItems: AbstractFilterItem[]): void {
       this.filterItems.push(...filterItems)

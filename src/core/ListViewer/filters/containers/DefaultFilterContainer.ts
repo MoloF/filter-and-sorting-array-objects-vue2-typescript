@@ -2,5 +2,5 @@ import DefaultFilterContainerComponent from '@/components/filters/containers/Def
 import { AbstractFilterContainer } from '../AbstractFilterContainer'
 
 export class DefaultFilterContainer extends AbstractFilterContainer {
-    component = DefaultFilterContainerComponent
+  component = DefaultFilterContainerComponent
 }
